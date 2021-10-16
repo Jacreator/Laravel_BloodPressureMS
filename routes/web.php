@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PatientExportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('livewire-datatables', function () {
+Route::get('/row', function () {
     return view('welcome');
+})->name('manage-patient');
+
+Route::get('/', function () {
+    return view('livewire.row');
 });
+
+Route::get('/patient/export', [PatientExportController::class, 'exportPatient'])->name('export-patient');

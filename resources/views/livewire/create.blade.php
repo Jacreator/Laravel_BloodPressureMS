@@ -1,4 +1,5 @@
 <div align="right">
+    <a href="{{ route('export-patient') }}" class="btn btn-primary">Generate Excel</a>
     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#createModal">Create</button>
 </div>
 

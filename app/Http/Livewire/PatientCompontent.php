@@ -21,8 +21,7 @@ class PatientCompontent extends Component
 
     public function render()
     {
-        $this->patientData = Patient::take(20)->orderBy('created_at', 'desc')->get();
-        // dd($this->patientData);
+        $this->patientData = Patient::take(20)->orderBy('first_name', 'desc')->get();
         return view('livewire.patient-compontent');
     }
 
